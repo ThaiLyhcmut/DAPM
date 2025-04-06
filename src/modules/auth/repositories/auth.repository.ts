@@ -1,0 +1,47 @@
+import { User } from 'src/modules/user/entities/user.entity';
+import { BaseRepository } from '../../../core/repositories/base.repository';
+import { CustomRepository } from '../../../core/repositories/custom-repository.decorator';
+
+@CustomRepository(User)
+export class AuthRepository extends BaseRepository<User> {
+  /**
+   * Tìm auth bằng email
+   * @param email - Email của người dùng
+   */
+  async findByEmail(email: string): Promise<User | null> {
+    return this.findOneBy({ email });
+  }
+
+  /**
+   * Kiểm tra email đã tồn tại chưa
+   * @param email - Email cần kiểm tra
+   */
+  async isEmailExists(email: string): Promise<boolean> {
+    return this.exists({ email });
+  }
+
+  /**
+   * Kiểm tra số điện thoại đã tồn tại chưa
+   * @param phone - Số điện thoại cần kiểm tra
+   */
+  async isPhoneExists(phone: string): Promise<boolean> {
+    return this.exists({ phone });
+  }
+
+  /**
+   * Xác thực tài khoản
+   * @param authId - ID của auth
+   */
+  async verifyAuth(authId: string): Promise<void> {
+    await this.update(authId, { isVerified: true });
+  }
+
+  /**
+   * Cập nhật token làm mới
+   * @param authId - ID của auth
+   * @param refreshToken - Token làm mới
+   */
+  async updateRefreshToken(authId: string, refreshToken: string | undefined): Promise<void> {
+    await this.update(authId, { refreshToken });
+  }
+}
