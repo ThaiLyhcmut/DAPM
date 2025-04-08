@@ -5,7 +5,7 @@ export default class LoginAuthDto {
   @IsNotEmpty({
       message: "require my email"
     })
-    @ApiProperty({ example: 'john@example.com' })
+    @ApiProperty({ example: 'john@example.com', required: true })
     @IsEmail()
     email: string
   
@@ -13,6 +13,6 @@ export default class LoginAuthDto {
     @IsNotEmpty({
       message: "require my password"
     })
-    @ApiProperty({ example: '123456' })
+    @ApiProperty({ example: '123456', required: true })
     password: string
 }

@@ -1,9 +1,11 @@
 import { BaseRepository } from 'src/core/repositories';
 import { CustomRepository } from 'src/core/repositories/custom-repository.decorator';
 import { Auth } from '../entities/auth.entity';
+import { FindOneOptions } from 'typeorm';
 
 @CustomRepository(Auth)
 export class AuthRepository extends BaseRepository<Auth> {
+
   /**
    * Tìm auth bằng email
    * @param email - Email của người dùng

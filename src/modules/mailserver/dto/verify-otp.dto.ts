@@ -12,5 +12,5 @@ export class VerifyOtpDto {
   @IsNotEmpty({ message: 'OTP code is required' })
   @Length(6, 6, { message: 'OTP code must be 6 characters' })
   @ApiProperty({ example: 'AbC123' })
-  code: string;
+  otp: string;
 }

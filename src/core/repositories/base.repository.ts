@@ -11,6 +11,9 @@ export class BaseRepository<T extends ObjectLiteral> {
   }
   // Mac dinh co san trong BaseRepository tu tao
 
+  async findOne(opsions: FindOptionsWhere<T>): Promise<T | null> {
+    return this.repository.findOne(opsions);
+  }
   /**
    * Tìm tất cả các bản ghi
    */

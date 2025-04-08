@@ -3,15 +3,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-import { Auth } from './modules/auth/entities/auth.entity';
-import { User } from './modules/user/entities/user.entity';
-import { Otp } from './modules/mailserver/entities/otp.entity';
-import { MailserverModule } from './modules/mailserver/mailserver.module';
-import { UserModule } from './modules/user/user.module';
-import { AuthModule } from './modules/auth/auth.module';
-import { Product } from './modules/product/entities/product.entiti';
-import { ProductModule } from './modules/product/product.module';
 import { RouterModule } from './router/router.module';
+import { Auth } from './apis/auth/entities/auth.entity';
+import { Otp } from './apis/otp/entities/otp.entity';
+import { Home } from './apis/home/entities/home.entity';
+import { Area } from './apis/area/entities/area-entity';
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -23,9 +19,9 @@ import { RouterModule } from './router/router.module';
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSW,
     database: process.env.DB_DATABASE,
-    entities: [Auth, User, Otp, Product],
+    entities: [Auth, Otp, Home, Area],
     synchronize: true,
-  }), RouterModule.forRoot()],
+  }), RouterModule.forRoot()], 
   controllers: [AppController],
   providers: [AppService],
 })

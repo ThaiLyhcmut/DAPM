@@ -1,5 +1,4 @@
 import { ApiProperty, PartialType } from '@nestjs/swagger';
-import { CreateAuthDto } from './create-auth.dto';
 import { IsEmail, IsOptional, IsString } from 'class-validator';
 
 export class UpdateAuthDto {

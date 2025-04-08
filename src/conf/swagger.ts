@@ -1,7 +1,9 @@
 import { BadRequestException, ClassSerializerInterceptor, ValidationPipe } from "@nestjs/common";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { ValidationError } from "class-validator";
-
+import * as fs from 'fs';
+import * as swaggerUi from 'swagger-ui-express';
+import * as path from 'path';
 
 export const DocsSwagger = (app) => {
   const newDocumentation = new DocumentBuilder()
@@ -25,5 +27,6 @@ export const DocsSwagger = (app) => {
           }))
         )
       }
-    }))
+    })
+  )
 }

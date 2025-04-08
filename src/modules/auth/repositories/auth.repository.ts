@@ -1,14 +1,15 @@
 import { User } from 'src/modules/user/entities/user.entity';
 import { BaseRepository } from '../../../core/repositories/base.repository';
 import { CustomRepository } from '../../../core/repositories/custom-repository.decorator';
+import { Auth } from '../entities/auth.entity';
 
-@CustomRepository(User)
-export class AuthRepository extends BaseRepository<User> {
+@CustomRepository(Auth)
+export class AuthRepository extends BaseRepository<Auth> {
   /**
    * Tìm auth bằng email
    * @param email - Email của người dùng
    */
-  async findByEmail(email: string): Promise<User | null> {
+  async findByEmail(email: string): Promise<Auth | null> {
     return this.findOneBy({ email });
   }
 

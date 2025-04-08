@@ -1,10 +1,11 @@
 import { Module } from "@nestjs/common";
+import { HomeModule } from "src/apis/home/home.module";
 
 
 
 
 @Module({
-  imports: [],
+  imports: [HomeModule],
   controllers: [],
   providers: [],
   exports: [],
