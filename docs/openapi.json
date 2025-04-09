@@ -1,0 +1,4369 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Generated API",
+    "version": "1.0.0",
+    "description": "This API was generated from custom JSON data."
+  },
+  "paths": {
+    "/tweets-group/get-list/{group_id}/{skip}/{limit}": {
+      "get": {
+        "summary": "get-list operation for tweets-group",
+        "tags": [
+          "tweets group"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweets-group/get-detail/{slug}/{skip}/{limit}/{tweet_id}/{group_id}": {
+      "get": {
+        "summary": "get-detail operation for tweets-group",
+        "tags": [
+          "tweets group"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tweet_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweets-group/post/": {
+      "post": {
+        "summary": "post operation for tweets-group",
+        "tags": [
+          "tweets group"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "integer"
+                  },
+                  "slug": {
+                    "type": "integer"
+                  },
+                  "short_description": {
+                    "type": "integer"
+                  },
+                  "long_description": {
+                    "type": "integer"
+                  },
+                  "featured_image": {
+                    "type": "integer"
+                  },
+                  "categories": {
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "type": "integer"
+                  },
+                  "privacy_setting": {
+                    "type": "integer"
+                  },
+                  "comment_off": {
+                    "type": "integer"
+                  },
+                  "like_off": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "integer"
+                  },
+                  "social_group": {
+                    "type": "integer"
+                  },
+                  "approve_at": {
+                    "type": "integer"
+                  },
+                  "approve_by": {
+                    "type": "integer"
+                  },
+                  "published_at": {
+                    "type": "integer"
+                  },
+                  "report_tweet_off": {
+                    "type": "integer"
+                  },
+                  "report_comment_off": {
+                    "type": "integer"
+                  },
+                  "images": {
+                    "type": "integer"
+                  },
+                  "video_link": {
+                    "type": "integer"
+                  },
+                  "video_file": {
+                    "type": "integer"
+                  },
+                  "vote_type": {
+                    "type": "integer"
+                  },
+                  "content": {
+                    "type": "integer"
+                  },
+                  "media_type": {
+                    "type": "integer"
+                  },
+                  "answers": {
+                    "type": "integer"
+                  },
+                  "reason": {
+                    "type": "integer"
+                  },
+                  "$2": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweets-group/put/{_id}": {
+      "put": {
+        "summary": "put operation for tweets-group",
+        "tags": [
+          "tweets group"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "integer"
+                  },
+                  "slug": {
+                    "type": "integer"
+                  },
+                  "short_description": {
+                    "type": "integer"
+                  },
+                  "long_description": {
+                    "type": "integer"
+                  },
+                  "images": {
+                    "type": "integer"
+                  },
+                  "featured_image": {
+                    "type": "integer"
+                  },
+                  "categories": {
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "type": "integer"
+                  },
+                  "comment_off": {
+                    "type": "integer"
+                  },
+                  "like_off": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "integer"
+                  },
+                  "published_at": {
+                    "type": "integer"
+                  },
+                  "report_tweet_off": {
+                    "type": "integer"
+                  },
+                  "report_comment_off": {
+                    "type": "integer"
+                  },
+                  "video_link": {
+                    "type": "integer"
+                  },
+                  "video_file": {
+                    "type": "integer"
+                  },
+                  "vote_type": {
+                    "type": "integer"
+                  },
+                  "content": {
+                    "type": "integer"
+                  },
+                  "media_type": {
+                    "type": "integer"
+                  },
+                  "answers": {
+                    "type": "integer"
+                  },
+                  "reason": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/tweets-group/delete/{_id}": {
+      "delete": {
+        "summary": "delete operation for tweets-group",
+        "tags": [
+          "tweets group"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet/get-list/{group_id}/{skip}/{limit}": {
+      "get": {
+        "summary": "get-list operation for tweet",
+        "tags": [
+          "tweet"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet/get-detail/{slug}/{skip}/{limit}/{tweet_id}/{group_id}": {
+      "get": {
+        "summary": "get-detail operation for tweet",
+        "tags": [
+          "tweet"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tweet_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet/put/{_id}": {
+      "put": {
+        "summary": "put operation for tweet",
+        "tags": [
+          "tweet"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "integer"
+                  },
+                  "slug": {
+                    "type": "integer"
+                  },
+                  "short_description": {
+                    "type": "integer"
+                  },
+                  "long_description": {
+                    "type": "integer"
+                  },
+                  "images": {
+                    "type": "integer"
+                  },
+                  "featured_image": {
+                    "type": "integer"
+                  },
+                  "categories": {
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "type": "integer"
+                  },
+                  "comment_off": {
+                    "type": "integer"
+                  },
+                  "like_off": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "integer"
+                  },
+                  "published_at": {
+                    "type": "integer"
+                  },
+                  "report_tweet_off": {
+                    "type": "integer"
+                  },
+                  "report_comment_off": {
+                    "type": "integer"
+                  },
+                  "video_link": {
+                    "type": "integer"
+                  },
+                  "video_file": {
+                    "type": "integer"
+                  },
+                  "vote_type": {
+                    "type": "integer"
+                  },
+                  "content": {
+                    "type": "integer"
+                  },
+                  "media_type": {
+                    "type": "integer"
+                  },
+                  "answers": {
+                    "type": "integer"
+                  },
+                  "reason": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/tweet/delete/{group_id}/{_id}": {
+      "delete": {
+        "summary": "delete operation for tweet",
+        "tags": [
+          "tweet"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/groups-public/get-list/": {
+      "get": {
+        "summary": "get-list operation for groups-public",
+        "tags": [
+          "groups public"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-members/get-list/{group_id}": {
+      "get": {
+        "summary": "get-list operation for group-members",
+        "tags": [
+          "group members"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-members/get-detail/": {
+      "get": {
+        "summary": "get-detail operation for group-members",
+        "tags": [
+          "group members"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/group-members/post/{group_id}": {
+      "post": {
+        "summary": "post operation for group-members",
+        "tags": [
+          "group members"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user": {
+                    "type": "integer"
+                  },
+                  "social_group": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-members/put/{group_id}": {
+      "put": {
+        "summary": "put operation for group-members",
+        "tags": [
+          "group members"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-members/delete/{group_id}": {
+      "delete": {
+        "summary": "delete operation for group-members",
+        "tags": [
+          "group members"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/groups-managing/get-list/{skip}/{limit}": {
+      "get": {
+        "summary": "get-list operation for groups-managing",
+        "tags": [
+          "groups managing"
+        ],
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group/post/": {
+      "post": {
+        "summary": "post operation for group",
+        "tags": [
+          "group"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cover": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "integer"
+                  },
+                  "slug": {
+                    "type": "integer"
+                  },
+                  "description": {
+                    "type": "integer"
+                  },
+                  "type": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group/put/{group_id}": {
+      "put": {
+        "summary": "put operation for group",
+        "tags": [
+          "group"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cover": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "integer"
+                  },
+                  "slug": {
+                    "type": "integer"
+                  },
+                  "description": {
+                    "type": "integer"
+                  },
+                  "type": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group/get-detail/{group_id}/{_id}": {
+      "get": {
+        "summary": "get-detail operation for group",
+        "tags": [
+          "group"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group/get-list/": {
+      "get": {
+        "summary": "get-list operation for group",
+        "tags": [
+          "group"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/join-group/post/": {
+      "post": {
+        "summary": "post operation for join-group",
+        "tags": [
+          "join group"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/join-group/delete/": {
+      "delete": {
+        "summary": "delete operation for join-group",
+        "tags": [
+          "join group"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/groups-pin/get-list/{skip}/{limit}": {
+      "get": {
+        "summary": "get-list operation for groups-pin",
+        "tags": [
+          "groups pin"
+        ],
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/groups-pin/post/": {
+      "post": {
+        "summary": "post operation for groups-pin",
+        "tags": [
+          "groups pin"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user": {
+                    "type": "integer"
+                  },
+                  "social_group": {
+                    "type": "integer"
+                  },
+                  "pinned_at": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/groups-pin/delete/": {
+      "delete": {
+        "summary": "delete operation for groups-pin",
+        "tags": [
+          "groups pin"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-categories/post/{group_id}": {
+      "post": {
+        "summary": "post operation for group-categories",
+        "tags": [
+          "group categories"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-categories/put/{group_id}": {
+      "put": {
+        "summary": "put operation for group-categories",
+        "tags": [
+          "group categories"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-categories/delete/{group_id}": {
+      "delete": {
+        "summary": "delete operation for group-categories",
+        "tags": [
+          "group categories"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-categories/get-list/{group_id}/{_id}": {
+      "get": {
+        "summary": "get-list operation for group-categories",
+        "tags": [
+          "group categories"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-categories/get-detail/{group_id}/{_id}": {
+      "get": {
+        "summary": "get-detail operation for group-categories",
+        "tags": [
+          "group categories"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/request-to-join-group/post/{group_id}": {
+      "post": {
+        "summary": "post operation for request-to-join-group",
+        "tags": [
+          "request to join group"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/request-to-join-group/get-list/": {
+      "get": {
+        "summary": "get-list operation for request-to-join-group",
+        "tags": [
+          "request to join group"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/request-to-join-group/delete/{group_id}": {
+      "delete": {
+        "summary": "delete operation for request-to-join-group",
+        "tags": [
+          "request to join group"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/request-to-join-group/put/{_id}": {
+      "put": {
+        "summary": "put operation for request-to-join-group",
+        "tags": [
+          "request to join group"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/groups-joined/get-list/{skip}/{limit}": {
+      "get": {
+        "summary": "get-list operation for groups-joined",
+        "tags": [
+          "groups joined"
+        ],
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-menu-item/get-list/{group_id}": {
+      "get": {
+        "summary": "get-list operation for group-menu-item",
+        "tags": [
+          "group menu item"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-menu-item/post/{group_id}": {
+      "post": {
+        "summary": "post operation for group-menu-item",
+        "tags": [
+          "group menu item"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-menu-item/put/{group_id}": {
+      "put": {
+        "summary": "put operation for group-menu-item",
+        "tags": [
+          "group menu item"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet-saved/post/": {
+      "post": {
+        "summary": "post operation for tweet-saved",
+        "tags": [
+          "tweet saved"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet-saved/get-list/{user_collection_id}": {
+      "get": {
+        "summary": "get-list operation for tweet-saved",
+        "tags": [
+          "tweet saved"
+        ],
+        "parameters": [
+          {
+            "name": "user_collection_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet-saved/delete/": {
+      "delete": {
+        "summary": "delete operation for tweet-saved",
+        "tags": [
+          "tweet saved"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet-saved/put/{collection_id}/{_id}": {
+      "put": {
+        "summary": "put operation for tweet-saved",
+        "tags": [
+          "tweet saved"
+        ],
+        "parameters": [
+          {
+            "name": "collection_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-reports/get-list/{group_id}/{_id}": {
+      "get": {
+        "summary": "get-list operation for group-reports",
+        "tags": [
+          "group reports"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-reports/post/{comment_id}": {
+      "post": {
+        "summary": "post operation for group-reports",
+        "tags": [
+          "group reports"
+        ],
+        "parameters": [
+          {
+            "name": "comment_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-reports/delete/{group_id}/{_id}": {
+      "delete": {
+        "summary": "delete operation for group-reports",
+        "tags": [
+          "group reports"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/social-tag/get-list/": {
+      "get": {
+        "summary": "get-list operation for social-tag",
+        "tags": [
+          "social tag"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/social-tag/post/": {
+      "post": {
+        "summary": "post operation for social-tag",
+        "tags": [
+          "social tag"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/social-tag/put/": {
+      "put": {
+        "summary": "put operation for social-tag",
+        "tags": [
+          "social tag"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/social-tag/delete/": {
+      "delete": {
+        "summary": "delete operation for social-tag",
+        "tags": [
+          "social tag"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/social-tag/get-detail/": {
+      "get": {
+        "summary": "get-detail operation for social-tag",
+        "tags": [
+          "social tag"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-tweets/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-tweets",
+        "tags": [
+          "user tweets"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/user-profile/get-detail/{user_id}": {
+      "get": {
+        "summary": "get-detail operation for user-profile",
+        "tags": [
+          "user profile"
+        ],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-profile/put/{user_id}": {
+      "put": {
+        "summary": "put operation for user-profile",
+        "tags": [
+          "user profile"
+        ],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-collection/get-detail/{collection_id}": {
+      "get": {
+        "summary": "get-detail operation for user-collection",
+        "tags": [
+          "user collection"
+        ],
+        "parameters": [
+          {
+            "name": "collection_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-collection/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-collection",
+        "tags": [
+          "user collection"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-collection/post/": {
+      "post": {
+        "summary": "post operation for user-collection",
+        "tags": [
+          "user collection"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-collection/delete/{_id}": {
+      "delete": {
+        "summary": "delete operation for user-collection",
+        "tags": [
+          "user collection"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-collection/put/{collection_id}/{_id}": {
+      "put": {
+        "summary": "put operation for user-collection",
+        "tags": [
+          "user collection"
+        ],
+        "parameters": [
+          {
+            "name": "collection_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/Like-entity/post/": {
+      "post": {
+        "summary": "post operation for Like-entity",
+        "tags": [
+          "Like entity"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/Like-entity/delete/": {
+      "delete": {
+        "summary": "delete operation for Like-entity",
+        "tags": [
+          "Like entity"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/social-user/get-list/{group_id}/{_id}": {
+      "get": {
+        "summary": "get-list operation for social-user",
+        "tags": [
+          "social user"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/social-user/put/": {
+      "put": {
+        "summary": "put operation for social-user",
+        "tags": [
+          "social user"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/transfer-owner-group/put/{group_id}/{_id}": {
+      "put": {
+        "summary": "put operation for transfer-owner-group",
+        "tags": [
+          "transfer owner group"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/comments/post/": {
+      "post": {
+        "summary": "post operation for comments",
+        "tags": [
+          "comments"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/comments/get-list/": {
+      "get": {
+        "summary": "get-list operation for comments",
+        "tags": [
+          "comments"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/comments/put/{_id}/{tweet_id}": {
+      "put": {
+        "summary": "put operation for comments",
+        "tags": [
+          "comments"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tweet_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/comments/delete/{_id}/{group_id}": {
+      "delete": {
+        "summary": "delete operation for comments",
+        "tags": [
+          "comments"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-follow/post/": {
+      "post": {
+        "summary": "post operation for user-follow",
+        "tags": [
+          "user follow"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-follow/delete/": {
+      "delete": {
+        "summary": "delete operation for user-follow",
+        "tags": [
+          "user follow"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-count/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-count",
+        "tags": [
+          "user count"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-overview/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-overview",
+        "tags": [
+          "user overview"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/comment-item/get-list/": {
+      "get": {
+        "summary": "get-list operation for comment-item",
+        "tags": [
+          "comment item"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/user-following/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-following",
+        "tags": [
+          "user following"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-followers/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-followers",
+        "tags": [
+          "user followers"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-setting/put/{group_id}/{_id}": {
+      "put": {
+        "summary": "put operation for group-setting",
+        "tags": [
+          "group setting"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet-type/get-list/": {
+      "get": {
+        "summary": "get-list operation for tweet-type",
+        "tags": [
+          "tweet type"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/course/post/": {
+      "post": {
+        "summary": "post operation for course",
+        "tags": [
+          "course"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/course/put/": {
+      "put": {
+        "summary": "put operation for course",
+        "tags": [
+          "course"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/course/get-list/": {
+      "get": {
+        "summary": "get-list operation for course",
+        "tags": [
+          "course"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course/get-detail/": {
+      "get": {
+        "summary": "get-detail operation for course",
+        "tags": [
+          "course"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/reason-of-report/get-list/": {
+      "get": {
+        "summary": "get-list operation for reason-of-report",
+        "tags": [
+          "reason of report"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/user-tweet-liked/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-tweet-liked",
+        "tags": [
+          "user tweet liked"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-tweet-commented/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-tweet-commented",
+        "tags": [
+          "user tweet commented"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/courses-user-joined/get-list/": {
+      "get": {
+        "summary": "get-list operation for courses-user-joined",
+        "tags": [
+          "courses user joined"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-user-manage/get-list/": {
+      "get": {
+        "summary": "get-list operation for course-user-manage",
+        "tags": [
+          "course user manage"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/categories/get-list/": {
+      "get": {
+        "summary": "get-list operation for categories",
+        "tags": [
+          "categories"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/courses-belongs-to-categories/get-list/": {
+      "get": {
+        "summary": "get-list operation for courses-belongs-to-categories",
+        "tags": [
+          "courses belongs to categories"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/courses-of-category/get-list/": {
+      "get": {
+        "summary": "get-list operation for courses-of-category",
+        "tags": [
+          "courses of category"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/chapter/post/": {
+      "post": {
+        "summary": "post operation for chapter",
+        "tags": [
+          "chapter"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/chapter/put/": {
+      "put": {
+        "summary": "put operation for chapter",
+        "tags": [
+          "chapter"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/chapter/get-list/{_id}/{course_id}/{group_id}": {
+      "get": {
+        "summary": "get-list operation for chapter",
+        "tags": [
+          "chapter"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/request-to-join-course/post/{_id}/{course_id}": {
+      "post": {
+        "summary": "post operation for request-to-join-course",
+        "tags": [
+          "request to join course"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lesson/post/{_id}/{group_id}": {
+      "post": {
+        "summary": "post operation for lesson",
+        "tags": [
+          "lesson"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lesson/put/{_id}/{course_id}": {
+      "put": {
+        "summary": "put operation for lesson",
+        "tags": [
+          "lesson"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lesson/get-list/{_id}/{course_id}": {
+      "get": {
+        "summary": "get-list operation for lesson",
+        "tags": [
+          "lesson"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/lesson/get-detail/{_id}/{lesson_id}/{course_id}": {
+      "get": {
+        "summary": "get-detail operation for lesson",
+        "tags": [
+          "lesson"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lesson_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/exam/post/{_id}/{course_id}": {
+      "post": {
+        "summary": "post operation for exam",
+        "tags": [
+          "exam"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/exam/get-list/{_id}/{course_id}": {
+      "get": {
+        "summary": "get-list operation for exam",
+        "tags": [
+          "exam"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/exam/put/{_id}/{course_id}": {
+      "put": {
+        "summary": "put operation for exam",
+        "tags": [
+          "exam"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/test-api-số-2/post/": {
+      "post": {
+        "summary": "post operation for test-api-số-2",
+        "tags": [
+          "test api số 2"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/test-api-số-2/put/": {
+      "put": {
+        "summary": "put operation for test-api-số-2",
+        "tags": [
+          "test api số 2"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/question/post/": {
+      "post": {
+        "summary": "post operation for question",
+        "tags": [
+          "question"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-overview/get-list/": {
+      "get": {
+        "summary": "get-list operation for course-overview",
+        "tags": [
+          "course overview"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/topic/post/": {
+      "post": {
+        "summary": "post operation for topic",
+        "tags": [
+          "topic"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/topic/put/{_id}/{course_id}": {
+      "put": {
+        "summary": "put operation for topic",
+        "tags": [
+          "topic"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/topic/get-list/{course_id}/{_id}": {
+      "get": {
+        "summary": "get-list operation for topic",
+        "tags": [
+          "topic"
+        ],
+        "parameters": [
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/topic/delete/{_id}/{course_id}": {
+      "delete": {
+        "summary": "delete operation for topic",
+        "tags": [
+          "topic"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion/post/": {
+      "post": {
+        "summary": "post operation for discussion",
+        "tags": [
+          "discussion"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion/put/{_id}": {
+      "put": {
+        "summary": "put operation for discussion",
+        "tags": [
+          "discussion"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion/delete/{_id}": {
+      "delete": {
+        "summary": "delete operation for discussion",
+        "tags": [
+          "discussion"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion/get-list/{course_id}/{_id}": {
+      "get": {
+        "summary": "get-list operation for discussion",
+        "tags": [
+          "discussion"
+        ],
+        "parameters": [
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course's-instructor/get-list/": {
+      "get": {
+        "summary": "get-list operation for course's-instructor",
+        "tags": [
+          "course's instructor"
+        ],
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course's-instructor/put/{_id}/{course_id}": {
+      "put": {
+        "summary": "put operation for course's-instructor",
+        "tags": [
+          "course's instructor"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-vote-result/post/": {
+      "post": {
+        "summary": "post operation for user-vote-result",
+        "tags": [
+          "user vote result"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-vote-result/delete/{_id}": {
+      "delete": {
+        "summary": "delete operation for user-vote-result",
+        "tags": [
+          "user vote result"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion-like/post/": {
+      "post": {
+        "summary": "post operation for discussion-like",
+        "tags": [
+          "discussion like"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion-like/delete/": {
+      "delete": {
+        "summary": "delete operation for discussion-like",
+        "tags": [
+          "discussion like"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion's-comment/post/": {
+      "post": {
+        "summary": "post operation for discussion's-comment",
+        "tags": [
+          "discussion's comment"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion's-comment/put/{_id}": {
+      "put": {
+        "summary": "put operation for discussion's-comment",
+        "tags": [
+          "discussion's comment"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion's-comment/get-list/{_id}/{discussion_id}": {
+      "get": {
+        "summary": "get-list operation for discussion's-comment",
+        "tags": [
+          "discussion's comment"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "discussion_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion's-comment/delete/{_id}": {
+      "delete": {
+        "summary": "delete operation for discussion's-comment",
+        "tags": [
+          "discussion's comment"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/discussion-comment-item/get-list/{_id}/{discussion_id}": {
+      "get": {
+        "summary": "get-list operation for discussion-comment-item",
+        "tags": [
+          "discussion comment item"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "discussion_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-member/post/": {
+      "post": {
+        "summary": "post operation for course-member",
+        "tags": [
+          "course member"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-member/get-list/{_id}/{course_id}": {
+      "get": {
+        "summary": "get-list operation for course-member",
+        "tags": [
+          "course member"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-member/delete/{_id}/{course_id}": {
+      "delete": {
+        "summary": "delete operation for course-member",
+        "tags": [
+          "course member"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-member/put/{_id}/{course_id}": {
+      "put": {
+        "summary": "put operation for course-member",
+        "tags": [
+          "course member"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/note/post/": {
+      "post": {
+        "summary": "post operation for note",
+        "tags": [
+          "note"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/note/get-list/{course_id}/{_id}": {
+      "get": {
+        "summary": "get-list operation for note",
+        "tags": [
+          "note"
+        ],
+        "parameters": [
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/note/put/{_id}": {
+      "put": {
+        "summary": "put operation for note",
+        "tags": [
+          "note"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/note/delete/{_id}": {
+      "delete": {
+        "summary": "delete operation for note",
+        "tags": [
+          "note"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/exam-submission/post/": {
+      "post": {
+        "summary": "post operation for exam-submission",
+        "tags": [
+          "exam submission"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/exam-submission/get-list/": {
+      "get": {
+        "summary": "get-list operation for exam-submission",
+        "tags": [
+          "exam submission"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/exam-submission/get-detail/": {
+      "get": {
+        "summary": "get-detail operation for exam-submission",
+        "tags": [
+          "exam submission"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-rating/post/": {
+      "post": {
+        "summary": "post operation for course-rating",
+        "tags": [
+          "course rating"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-rating/get-list/{_id}/{course_id}": {
+      "get": {
+        "summary": "get-list operation for course-rating",
+        "tags": [
+          "course rating"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "course_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-rating/put/{_id}": {
+      "put": {
+        "summary": "put operation for course-rating",
+        "tags": [
+          "course rating"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/course-rating/delete/{_id}": {
+      "delete": {
+        "summary": "delete operation for course-rating",
+        "tags": [
+          "course rating"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/group-overview/get-detail/": {
+      "get": {
+        "summary": "get-detail operation for group-overview",
+        "tags": [
+          "group overview"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/like-entity/post/": {
+      "post": {
+        "summary": "post operation for like-entity",
+        "tags": [
+          "like entity"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/user-tenant-profile/put/{user_id}": {
+      "put": {
+        "summary": "put operation for user-tenant-profile",
+        "tags": [
+          "user tenant profile"
+        ],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-tenant-profile/post/{user_id}": {
+      "post": {
+        "summary": "post operation for user-tenant-profile",
+        "tags": [
+          "user tenant profile"
+        ],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-tenant-profile/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-tenant-profile",
+        "tags": [
+          "user tenant profile"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/user-tenant-profile/get-detail/": {
+      "get": {
+        "summary": "get-detail operation for user-tenant-profile",
+        "tags": [
+          "user tenant profile"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/leave-group/put/": {
+      "put": {
+        "summary": "put operation for leave-group",
+        "tags": [
+          "leave group"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user-tenant/get-list/": {
+      "get": {
+        "summary": "get-list operation for user-tenant",
+        "tags": [
+          "user tenant"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/tweet-relative/get-list/": {
+      "get": {
+        "summary": "get-list operation for tweet-relative",
+        "tags": [
+          "tweet relative"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/tenant-setting/get-list/": {
+      "get": {
+        "summary": "get-list operation for tenant-setting",
+        "tags": [
+          "tenant setting"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/tweet-pin/post/{group_id}/{_id}": {
+      "post": {
+        "summary": "post operation for tweet-pin",
+        "tags": [
+          "tweet pin"
+        ],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "JWT Authorization header using the Bearer scheme."
+      }
+    }
+  }
+}

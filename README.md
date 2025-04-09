@@ -1,98 +1,118 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Hệ thống Xác thực và Quản lý Profile
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Tính năng
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- Đăng ký tài khoản với xác thực email (OTP)
+- Đăng nhập với xác thực JWT
+- Quản lý profile
+  - Xem và chỉnh sửa profile cá nhân
+  - Xem profile người khác (chỉ những trường được phép)
 
-## Description
+## API Endpoints
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Đăng ký và xác thực
 
-## Project setup
-
-```bash
-$ npm install
+#### Đăng ký tài khoản mới
 ```
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+POST /users
 ```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+- Request Body:
+```json
+{
+  "fullName": "Tên người dùng",
+  "email": "user@example.com",
+  "password": "mật khẩu",
+  "phone": "1234567890"
+}
 ```
+- Response: Tài khoản được tạo và OTP gửi đến email
+- Lưu ý: Tài khoản chỉ được đánh dấu là đã xác thực sau khi xác minh OTP
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
+#### Xác thực email bằng OTP
 ```
+POST /users/verify
+```
+- Request Body:
+```json
+{
+  "email": "user@example.com",
+  "code": "123456"
+}
+```
+- Response: Tài khoản được xác thực
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+#### Gửi lại OTP (nếu cần)
+```
+POST /mail/send-otp
+```
+- Request Body:
+```json
+{
+  "email": "user@example.com"
+}
+```
+- Response: OTP mới được gửi đến email
 
-## Resources
+### Đăng nhập và Profile
 
-Check out a few resources that may come in handy when working with NestJS:
+#### Đăng nhập
+```
+POST /auth/login
+```
+- Request Body:
+```json
+{
+  "email": "user@example.com",
+  "password": "mật khẩu"
+}
+```
+- Response: JWT access token
+- Lưu ý: Chỉ tài khoản đã xác thực mới có thể đăng nhập
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+#### Xem profile cá nhân
+```
+GET /profile
+```
+- Header: `Authorization: Bearer YOUR_JWT_TOKEN`
+- Response: Thông tin đầy đủ về profile
 
-## Support
+#### Cập nhật profile cá nhân
+```
+PUT /profile
+```
+- Header: `Authorization: Bearer YOUR_JWT_TOKEN`
+- Request Body (các trường cần cập nhật):
+```json
+{
+  "fullName": "Tên mới",
+  "phone": "9876543210"
+}
+```
+- Response: Profile được cập nhật
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+#### Xem profile người khác
+```
+GET /profile/:id
+```
+- Response: Chỉ các trường công khai (id, fullName, createdAt, updatedAt)
+- Lưu ý: Endpoint này không yêu cầu xác thực
 
-## Stay in touch
+## Quy trình xác thực
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+1. Người dùng đăng ký với email, mật khẩu và thông tin profile
+2. Hệ thống tạo tài khoản (đánh dấu là chưa xác thực) và gửi OTP đến email
+3. Người dùng xác thực email bằng cách gửi OTP
+4. Sau khi xác thực, người dùng có thể đăng nhập và nhận JWT token
+5. JWT token được sử dụng cho tất cả các yêu cầu cần xác thực
 
-## License
+## Bảo mật Profile
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+- Profile cá nhân: Bạn có thể xem và chỉnh sửa tất cả chi tiết
+- Profile người khác: Bạn chỉ có thể xem các trường công khai (id, fullName, v.v.)
+
+## Xử lý lỗi
+
+- 400: Bad Request (dữ liệu đầu vào không hợp lệ)
+- 401: Unauthorized (không có token hợp lệ)
+- 404: Not Found (người dùng hoặc tài nguyên không tồn tại)
+- 409: Conflict (email hoặc số điện thoại đã tồn tại)

@@ -1,0 +1,2602 @@
+[
+  {
+    "controller": "tweets group",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "group_id",
+            "skip",
+            "limit"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "slug",
+            "skip",
+            "limit",
+            "tweet_id",
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [
+            {
+              "title": 1,
+              "slug": 1,
+              "short_description": 0,
+              "long_description": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "privacy_setting": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "social_group": 0,
+              "approve_at": 0,
+              "approve_by": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 1,
+              "slug": 1,
+              "short_description": 0,
+              "long_description": 0,
+              "images": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "social_group": 0,
+              "approve_at": 0,
+              "approve_by": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 1,
+              "slug": 1,
+              "short_description": 0,
+              "video_link": 0,
+              "video_file": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "social_group": 0,
+              "approve_at": 0,
+              "approve_by": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 1,
+              "slug": 1,
+              "short_description": 0,
+              "long_description": 0,
+              "vote_type": 0,
+              "content": 0,
+              "media_type": 0,
+              "answers": 0,
+              "reason": 0,
+              "$2": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "social_group": 0,
+              "approve_at": 0,
+              "approve_by": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [],
+          "body": [
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "long_description": 0,
+              "images": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "video_link": 0,
+              "video_file": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "long_description": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "long_description": 0,
+              "vote_type": 0,
+              "content": 0,
+              "media_type": 0,
+              "answers": 0,
+              "reason": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "tweet",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "group_id",
+            "skip",
+            "limit"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "slug",
+            "skip",
+            "limit",
+            "tweet_id",
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [],
+          "body": [
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "long_description": 0,
+              "images": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "video_link": 0,
+              "video_file": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "long_description": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            },
+            {
+              "title": 0,
+              "slug": 0,
+              "short_description": 0,
+              "long_description": 0,
+              "vote_type": 0,
+              "content": 0,
+              "media_type": 0,
+              "answers": 0,
+              "reason": 0,
+              "featured_image": 0,
+              "categories": 0,
+              "tag": 0,
+              "comment_off": 0,
+              "like_off": 0,
+              "status": 0,
+              "published_at": 0,
+              "report_tweet_off": 0,
+              "report_comment_off": 0
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "groups public",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "group members",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [
+            {
+              "user": 1,
+              "social_group": 1,
+              "status": "['joined']",
+              "role": 1
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [
+            {
+              "status": [
+                "pending",
+                "left"
+              ]
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "groups managing",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "skip",
+            "limit"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "group",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [
+            {
+              "cover": 0,
+              "name": 0,
+              "slug": 0,
+              "description": 0,
+              "type": 0,
+              "status": 0
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [
+            {
+              "cover": 0,
+              "name": 0,
+              "slug": 0,
+              "description": 0,
+              "type": 0,
+              "status": 0
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "join group",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "groups pin",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "skip",
+            "limit"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [
+            {
+              "user": 1,
+              "social_group": 1,
+              "pinned_at": 0
+            }
+          ],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "group categories",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "request to join group",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "groups joined",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "skip",
+            "limit"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "group menu item",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "tweet saved",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "user_collection_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "collection_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "group reports",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "comment_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "social tag",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user tweets",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user profile",
+    "methods": [
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "user_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "user_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user collection",
+    "methods": [
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "collection_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "collection_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "Like entity",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "social user",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "transfer owner group",
+    "methods": [
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "comments",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id",
+            "tweet_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id",
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user follow",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user count",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user overview",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "comment item",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user following",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user followers",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "group setting",
+    "methods": [
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "tweet type",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "course",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "reason of report",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user tweet liked",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user tweet commented",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "courses user joined",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "course user manage",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "categories",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "courses belongs to categories",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "courses of category",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "chapter",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "_id",
+            "course_id",
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "request to join course",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "lesson",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "_id",
+            "group_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "_id",
+            "lesson_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "methods": []
+  },
+  {
+    "controller": "exam",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "test api số 2",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "question",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "course overview",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "controller": "topic",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "course_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "discussion",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "course_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "course's instructor",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user vote result",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "discussion like",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "discussion's comment",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "_id",
+            "discussion_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "discussion comment item",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "_id",
+            "discussion_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "course member",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "note",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "course_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "exam submission",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "course rating",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [
+            "_id",
+            "course_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": [
+            "x-tenant-id"
+          ]
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "delete",
+        "input": {
+          "params": [
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "group overview",
+    "methods": [
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user profile",
+    "methods": [
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [
+            "user_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "user_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "like entity",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user tenant profile",
+    "methods": [
+      {
+        "name": "put",
+        "input": {
+          "params": [
+            "user_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "user_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      },
+      {
+        "name": "get-detail",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "leave group",
+    "methods": [
+      {
+        "name": "put",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "user tenant",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "tweet relative",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "tenant setting",
+    "methods": [
+      {
+        "name": "get-list",
+        "input": {
+          "params": [],
+          "jwt": [],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  },
+  {
+    "controller": "tweet pin",
+    "methods": [
+      {
+        "name": "post",
+        "input": {
+          "params": [
+            "group_id",
+            "_id"
+          ],
+          "jwt": [
+            "user.id"
+          ],
+          "body": [],
+          "query": [],
+          "headers": []
+        }
+      }
+    ]
+  }
+]

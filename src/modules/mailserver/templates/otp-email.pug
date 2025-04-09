@@ -1,0 +1,103 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title Verification Code
+    style.
+      @media only screen and (max-width: 620px) {
+        table[class=body] h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important;
+        }
+        table[class=body] p,
+        table[class=body] ul,
+        table[class=body] ol,
+        table[class=body] td,
+        table[class=body] span,
+        table[class=body] a {
+          font-size: 16px !important;
+        }
+        table[class=body] .wrapper,
+        table[class=body] .article {
+          padding: 10px !important;
+        }
+        table[class=body] .content {
+          padding: 0 !important;
+        }
+        table[class=body] .container {
+          padding: 0 !important;
+          width: 100% !important;
+        }
+        table[class=body] .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important;
+        }
+        table[class=body] .btn table {
+          width: 100% !important;
+        }
+        table[class=body] .btn a {
+          width: 100% !important;
+        }
+        table[class=body] .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important;
+        }
+      }
+      @media all {
+        .ExternalClass {
+          width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important;
+        }
+        .btn-primary table td:hover {
+          background-color: #3a7bac !important;
+        }
+        .btn-primary a:hover {
+          background-color: #3a7bac !important;
+          border-color: #3a7bac !important;
+        }
+      }
+  
+  body(class='')
+    table.body(border='0', cellpadding='0', cellspacing='0')
+      tr
+        td &nbsp;
+        
+        td.container
+          .content
+            // START CENTERED WHITE CONTAINER
+            table.main
+              // START MAIN CONTENT AREA
+              tr
+                td.wrapper
+                  table(border='0', cellpadding='0', cellspacing='0')
+                    tr
+                      td
+                        p Xin chào,
+                        p Đây là mã xác thực của bạn. Mã này sẽ hết hạn sau 10 phút.
+                        p
+                          strong #{code}
+                        p Nếu bạn không yêu cầu mã này, vui lòng bỏ qua email này.
+                        p Trân trọng,
+                        p Đội ngũ hỗ trợ
+            
+            // END CENTERED WHITE CONTAINER
+            
+        td &nbsp;
