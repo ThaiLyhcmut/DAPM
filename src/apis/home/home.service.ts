@@ -32,10 +32,10 @@ export class HomeService {
   }
 
   async getHomeById(id: string) {
-    // Logic to handle the request
     const home = await this.homeRepository.findById(id);
     return home;
   }
+
 
   updateHome(id: string, updateHomeDto: any) {
     // Logic to handle the request

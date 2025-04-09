@@ -34,6 +34,7 @@ export class BaseRepository<T extends ObjectLiteral> {
    * @param conditions - Điều kiện tìm kiếm
    */
   async findOneBy(conditions: FindOptionsWhere<T>): Promise<T | null> {
+    console.log('findOneBy', conditions);
     return this.repository.findOneBy(conditions);
   }
 

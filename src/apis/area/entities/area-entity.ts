@@ -1,7 +1,8 @@
 import { ApiProperty } from "@nestjs/swagger";
+import { Equipment } from "src/apis/equipment/entities/equipment.entity";
 import { Home } from "src/apis/home/entities/home.entity";
 import { BaseEntity } from "src/core/entities/base.entity";
-import { Column, Entity, JoinColumn, ManyToOne } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany } from "typeorm";
 
 
 @Entity('areas')
@@ -22,4 +23,6 @@ export class Area extends BaseEntity {
   @JoinColumn({ name: 'homeId'})
   home: Home;
 
+  @OneToMany(() => Equipment, (equipment) => equipment.area)
+  equipments: Equipment[];
 }

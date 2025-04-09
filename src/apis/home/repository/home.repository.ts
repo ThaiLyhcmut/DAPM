@@ -12,4 +12,7 @@ export class HomeRepository extends BaseRepository<Home> {
   async deleteByAccountId(id: string | number): Promise<void> {
     await this.delete(id);
   }
+  async getHomeById(id: string): Promise<Home | null> {
+    return this.findById(id);
+  }
 }

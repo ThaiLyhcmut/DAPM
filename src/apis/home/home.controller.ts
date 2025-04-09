@@ -32,6 +32,24 @@ export class HomeController {
     return this.homeService.getHome(request.user.id);
   }
 
+  @Get(':id')
+  @UseGuards(JwtAuthGuard)
+  async getHomeById(
+    @Request() request: any,
+    @Param('id') id: string
+  ) {
+    const home = await this.homeService.getHomeById(id);
+    
+    if (!home) {
+      throw new NotFoundException('Home not found');
+    }
+    
+    if (home.accountId !== request.user.id) {
+      throw new UnauthorizedException('You are not authorized to view this home');
+    }
+    
+    return home;
+  }
   @Patch(':id')
   @UseGuards(JwtAuthGuard)
   async updateHome(

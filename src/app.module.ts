@@ -8,6 +8,7 @@ import { Auth } from './apis/auth/entities/auth.entity';
 import { Otp } from './apis/otp/entities/otp.entity';
 import { Home } from './apis/home/entities/home.entity';
 import { Area } from './apis/area/entities/area-entity';
+import { Equipment } from './apis/equipment/entities/equipment.entity';
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -19,7 +20,7 @@ import { Area } from './apis/area/entities/area-entity';
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSW,
     database: process.env.DB_DATABASE,
-    entities: [Auth, Otp, Home, Area],
+    entities: [Auth, Otp, Home, Area, Equipment],
     synchronize: true,
   }), RouterModule.forRoot()], 
   controllers: [AppController],

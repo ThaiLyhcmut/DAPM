@@ -8,13 +8,15 @@ import { AreaService } from "./area.service";
 import { LocalStrategy } from "src/core/passport/local.strategy";
 import { ConfigModule } from "@nestjs/config";
 import { AuthModule } from "../auth/auth.module";
+import { HomeModule } from "../home/home.module";
 
 
 @Module({
   imports: [
     TypeOrmExModule.forCustomRepository([AreaRepository]),
     ConfigModule.forRoot(),
-    AuthModule
+    AuthModule,
+    HomeModule,
   ],
   controllers: [AreaController],
   providers: [AreaService],

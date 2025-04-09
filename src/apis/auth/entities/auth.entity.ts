@@ -1,6 +1,8 @@
 import { Column, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn, Timestamp } from "typeorm";
 import { BaseEntity } from "../../../core/entities/base.entity";
 import { Home } from "src/apis/home/entities/home.entity";
+import { Equipment } from "src/apis/equipment/entities/equipment.entity";
+import e from "express";
 
 @Entity('accounts')
 export class Auth extends BaseEntity {
@@ -39,4 +41,7 @@ export class Auth extends BaseEntity {
 
   @OneToMany(() => Home, (home) => home.auth)
   homes: Home[];
+
+  @OneToMany(() => Equipment, (equipment) => equipment.auth)
+  equipments: Equipment[];
 }

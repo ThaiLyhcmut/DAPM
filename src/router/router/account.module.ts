@@ -7,7 +7,7 @@ import { OtpModule } from "src/apis/otp/otp.module";
 
 
 @Module({
-  imports: [AuthModule, OtpModule, AreaModule],
+  imports: [AuthModule, OtpModule],
   controllers: [],
   providers: [],
   exports: [],

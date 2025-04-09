@@ -1,10 +1,11 @@
 import { Module } from "@nestjs/common";
+import { AreaModule } from "src/apis/area/area.module";
 
 
 
 
 @Module({
-  imports: [],
+  imports: [AreaModule],
   controllers: [],
   providers: [],
   exports: [],
